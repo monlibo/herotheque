@@ -100,10 +100,10 @@ class ManageCompany extends Component
             $company->url = $this->url;
             $company->field = $this->field;
             if ($this->newLogo) {
-                // $path = $this->newLogo->store('img', 'public');
-                // $company->logo = $path;
+                $path = $this->newLogo->store('img', 'public');
+                $company->logo = $path;
                 /* Stockage amazone */
-                Storage::disk('s3')->put('profile_photos', $this->newPhoto);
+                Storage::disk('s3')->put('profile_photos', $this->newLogo);
                 $this->logo = $this->company->logo ?  Storage::url($path) : '';
             }
 

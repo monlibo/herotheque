@@ -12,7 +12,8 @@
         <!-- Search input -->
 
         <div class="font-bold flex flex-1 text-[14px]  lg:text-xl text-indigo-600">
-            <img src="{{ Storage::url('illustrations/logo.svg') }}" class="min-w-[90px] max-w-[90px] lg:min-w-[150px] lg:max-w-[150px] " alt="">
+            <img src="{{ Storage::url('illustrations/logo.svg') }}"
+                class="min-w-[90px] max-w-[90px] lg:min-w-[150px] lg:max-w-[150px] " alt="">
         </div>
         <div class="hidden lg:block lg:!mr-10 text-[14px]">
             <a href="{{ route('search') }}">
@@ -108,13 +109,13 @@
             <!-- Profile menu -->
             <li class="relative">
                 <button
-                    class="align-middle flex space-x-3 items-center rounded-full focus:shadow-outline-purple focus:outline-none"
+                    class="align-middle flex h-8 w-8 space-x-3 items-center rounded-full focus:shadow-outline-purple focus:outline-none"
                     @click="toggleProfileMenu" @keydown.escape="closeProfileMenu" aria-label="Account"
                     aria-haspopup="true">
 
-                    @if (Laravel\Jetstream\Jetstream::managesProfilePhotos() && Auth::user()->profile_photo_path )
-                        <img class="h-8 w-8 rounded-full object-cover" src="{{ Storage::url(Auth::user()->profile_photo_path) }}"
-                            alt="" />
+                    @if (Laravel\Jetstream\Jetstream::managesProfilePhotos() && Auth::user()->profile_photo_path)
+                        <img class="h-8 w-8 rounded-full object-cover"
+                            src="{{ Storage::url(Auth::user()->profile_photo_path) }}" alt="" />
                     @endif
                     <span class="text-[13px] hidden md:block">{{ Auth::user()->nickname }}</span>
                 </button>
