@@ -261,7 +261,7 @@
                         @else
                             <div class="flex flex-col items-center space-y-4 bg-white py-3">
                                 <div class="md:w-[300px] md:h-[300px]">
-                                    <img src="storage/illustrations/search-error.jpg" alt="">
+                                    <img src="{{ Storage::url('illustrations/search-error.jpg') }}" alt="">
                                 </div>
                                 <div class="text-center font-semibold">Nous sommes désolés !</div>
                                 <div class="text-center">Aucun résultat ne correspond à votre recherche: <br>
