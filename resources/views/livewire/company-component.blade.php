@@ -44,10 +44,13 @@
                     </div>
                     <div class="w-full py-4 grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-4 px-6 mt-6">
                         @foreach ($companies as $company)
-                            <a href="{{ route('company.show',['company'=>$company]) }}">
+                            <a href="{{ route('company.show', ['company' => $company]) }}">
                                 <div class="h-36 flex space-x-3 bg-white  shadow-md shadow-gray-200">
                                     <div class="w-36 h-36 bg-green-400">
-                                        <img src="{{ Storage::url($company->logo) }}" class="h-full" alt="">
+                                        @if ($company->logo)
+                                            <img src="{{ Storage::url($company->logo) }}" class="h-full"
+                                                alt="">
+                                        @endif
                                     </div>
                                     <div class="w-36 h-36 flex flex-col space-y-1 flex-1 px-4 justify-center">
                                         <div class="w-full font-bold">
