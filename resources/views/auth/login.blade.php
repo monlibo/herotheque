@@ -19,7 +19,7 @@
 
             </div>
             <div class="w-full mx-auto px-20 flex-col items-center space-y-6">
-                <h1 class="text-blue-500 font-bold text-4xl font-sans">Emploitheque</h1>
+                <h1 class="text-white font-bold text-4xl font-sans">Emploitheque</h1>
                 <p class="text-white mt-1">Découvrez une multitude d'opportunités</p>
                 <div class="flex justify-center lg:justify-start mt-6">
                     <a href="{{ route('search') }}"

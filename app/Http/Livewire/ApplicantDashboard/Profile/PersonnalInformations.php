@@ -152,7 +152,7 @@ class PersonnalInformations extends Component
         if ($this->newPhoto) {
             $path = $this->newPhoto->store('profile_photos', 'public');
             $this->user->profile_photo_path = $path;
-            $this->photo = $this->user->profile_photo_path ?  env('APP_URL') . Storage::url($path) : '';
+            $this->photo = $this->user->profile_photo_path ?  Storage::url($path) : '';
 
             /* Stockage amazone */
             Storage::disk('s3')->put('profile_photos', $this->newPhoto);
