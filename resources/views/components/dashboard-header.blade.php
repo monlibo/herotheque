@@ -112,7 +112,7 @@
                     @click="toggleProfileMenu" @keydown.escape="closeProfileMenu" aria-label="Account"
                     aria-haspopup="true">
 
-                    @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
+                    @if (Laravel\Jetstream\Jetstream::managesProfilePhotos() && Auth::user()->profile_photo_path )
                         <img class="h-8 w-8 rounded-full object-cover" src="{{ Storage::url(Auth::user()->profile_photo_path) }}"
                             alt="" />
                     @endif
