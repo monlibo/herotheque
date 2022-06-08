@@ -113,7 +113,7 @@
                     aria-haspopup="true">
 
                     @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
-                        <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}"
+                        <img class="h-8 w-8 rounded-full object-cover" src="{{ Storage::url(Auth::user()->profile_photo_url) }}"
                             alt="" />
                     @endif
                     <span class="text-[13px] hidden md:block">{{ Auth::user()->nickname }}</span>

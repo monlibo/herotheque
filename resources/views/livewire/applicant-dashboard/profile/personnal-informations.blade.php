@@ -67,7 +67,7 @@
                     @csrf
                     <div class="col-span-6 !mb-6 sm:col-span-4 flex w-full md:w-[90%] justify-start items-end">
                         <div
-                            class="min-w-[100px] min-h-[100px] lg:h-[100px] lg:min-w-[100px] rounded-full overflow-hidden flex bg-blue-100">
+                            class="max-w-[100px] max-h-[100px]  rounded-full overflow-hidden flex bg-blue-100">
                             @if (!$temporaryPhoto)
                                 <img src="{{ $photo }}" class="w-full">
                             @else
