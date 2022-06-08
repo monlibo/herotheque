@@ -199,7 +199,7 @@ class PersonnalInformations extends Component
             $this->cities = City::all();
         }
 
-        $this->photo = $this->profile->user->profile_photo_path ?  env('APP_URL') . Storage::url($this->profile->user->profile_photo_path) : '';
+        $this->photo = $this->profile->user->profile_photo_path ?  Storage::url($this->profile->user->profile_photo_path) : '';
     }
 
     public function render()
