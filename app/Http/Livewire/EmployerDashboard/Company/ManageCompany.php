@@ -103,7 +103,7 @@ class ManageCompany extends Component
                 $path = $this->newLogo->store('img', 'public');
                 $company->logo = $path;
                 /* Stockage amazone */
-                Storage::disk('s3')->put('profile_photos', $this->newLogo);
+                Storage::disk('s3')->put('img', $this->newLogo);
                 $this->logo = $this->company->logo ?  Storage::url($path) : '';
             }
 
