@@ -23,7 +23,8 @@
 
     @guest
         <div class="flex space-x-4">
-            <a href="{{ route('login') }}" class="hidden lg:flex items-center  border-violet-500 border-[1px]  text-violet-500 text-[14px] py-1 px-4">Se
+            <a href="{{ route('login') }}"
+                class="hidden lg:flex items-center  border-violet-500 border-[1px]  text-violet-500 text-[14px] py-1 px-4">Se
                 connecter</a>
             <a href="{{ route('register') }}"
                 class="hidden lg:flex items-center  bg-violet-500  text-white text-[14px] py-1 px-4">S'inscrire</a>
@@ -50,13 +51,12 @@
         <!-- Profile menu -->
         <div class="relative">
             <button
-                class="align-middle flex space-x-3 items-center rounded-full focus:shadow-outline-purple focus:outline-none"
-                @click="openProfileMenu = true" @click.away="openProfileMenu = false" aria-label="Account"
-                aria-haspopup="true">
+                class="align-middle flex h-8 w-8 bg-blue-200 space-x-3 items-center rounded-full focus:shadow-outline-purple focus:outline-none"
+                @click="toggleProfileMenu" @keydown.escape="closeProfileMenu" aria-label="Account" aria-haspopup="true">
 
-                @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
-                    <img class="h-8 w-8 rounded-full object-cover" src="{{ Storage::url(Auth::user()->profile_photo_path) }}"
-                        alt="{{ Auth::user()->firstname }}" />
+                @if (Laravel\Jetstream\Jetstream::managesProfilePhotos() && Auth::user()->profile_photo_path)
+                    <img class="h-8 w-8 rounded-full object-cover"
+                        src="{{ Storage::url(Auth::user()->profile_photo_path) }}" alt="" />
                 @endif
                 <span class="text-[13px] hidden md:block">{{ Auth::user()->nickname }}</span>
             </button>
