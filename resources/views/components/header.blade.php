@@ -52,7 +52,7 @@
         <div class="relative">
             <button
                 class="align-middle flex h-8 w-8 bg-blue-200 space-x-3 items-center rounded-full focus:shadow-outline-purple focus:outline-none"
-                @click="toggleProfileMenu" @keydown.escape="closeProfileMenu" aria-label="Account" aria-haspopup="true">
+                @click="openProfileMenu = !openProfileMenu" @keydown.escape="openProfileMenu = false" aria-label="Account" aria-haspopup="true">
 
                 @if (Laravel\Jetstream\Jetstream::managesProfilePhotos() && Auth::user()->profile_photo_path)
                     <img class="h-8 w-8 rounded-full object-cover"
