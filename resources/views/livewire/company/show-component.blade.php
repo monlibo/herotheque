@@ -5,7 +5,9 @@
         <div class="flex flex-col bg-white shadow-md shadow-violet-50 w-full lg:px-6">
             <div class="flex flex-col lg:flex-row  justify-center w-full lg:space-x-6 px-6 py-6  ">
                 <div class="max-w-[160px] max-h-40 rounded-full overflow-hidden">
-                    <img src="{{ Storage::url($company->logo) }}" class="h-full" alt="">
+                    @if($company->logo)
+                        <img src="{{ Storage::url($company->logo) }}" class="h-full" alt="">
+                    @endif
                 </div>
                 <div class="flex flex-col space-y-1 py-3 flex-1 h-40">
                     <div class="w-full font-bold text-2xl">
