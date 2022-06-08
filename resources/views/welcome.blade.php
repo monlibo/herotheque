@@ -82,7 +82,7 @@
                 class="bg-white rounded-lg flex flex-col lg:flex-row  items-center lg:w-4/5 mx-auto border-b p-6 mb-10 border-gray-200">
                 <div
                     class="md:max-h-[350px] md:max-w-[350px] w-full lg:mr-10 flex items-center  justify-center rounded-full  text-indigo-500 flex-shrink-0">
-                    <img src="storage/illustrations/i1.jpg" class="w-full" alt="">
+                    <img src="{{ Storage::url('illustrations/i1.jpg') }}" class="w-full" alt="">
                 </div>
                 <div class="flex-grow sm:text-left text-left mt-6 sm:mt-0">
                     <h2 class="text-gray-900 text-lg lg:text-xl title-font font-bold mb-2 ">Trouvez l'emploi qu'il vous
@@ -101,7 +101,7 @@
                 class="bg-white rounded-lg flex items-center lg:w-4/5 mx-auto border-b p-6 mb-10 border-gray-200 sm:flex-row flex-col">
                 <div
                     class="w-full lg:hidden lg:mr-10 inline-flex items-center justify-center rounded-full  text-indigo-500 flex-shrink-0">
-                    <img src="storage/illustrations/i2.jpg" class="w-full" alt="">
+                    <img src="{{ Storage::url('illustrations/i2.jpg') }}" class="w-full" alt="">
                 </div>
                 <div class="flex-grow sm:text-left mt-6 sm:mt-0">
                     <h2 class="text-gray-900 text-lg lg:text-xl title-font font-bold mb-2">Trouvrez le ou les candidats
@@ -114,7 +114,7 @@
                 </div>
                 <div
                     class="md:max-h-[350px] md:max-w-[350px] hidden sm:mr-10 md:inline-flex items-center justify-center rounded-full  text-indigo-500 flex-shrink-0">
-                    <img src="storage/illustrations/i2.jpg" alt="">
+                    <img src="{{ Storage::url('illustrations/i2.jpg') }}" alt="">
                 </div>
 
             </div>
@@ -123,7 +123,7 @@
                 class="bg-white rounded-lg flex items-center lg:w-4/5 mx-auto border-b p-6 mb-10 border-gray-200 sm:flex-row flex-col">
                 <div
                     class="md:max-h-[350px] md:max-w-[350px] w-full lg:mr-10 flex items-center bg-red-500 justify-center rounded-full  text-indigo-500 flex-shrink-0">
-                    <img src="storage/illustrations/i3.jpg" class="w-full" alt="">
+                    <img src="{{ Storage::url('illustrations/i3.jpg') }}" class="w-full" alt="">
                 </div>
                 <div class="flex-grow sm:text-left  mt-6 sm:mt-0">
                     <h2 class="text-gray-900 text-lg lg:text-xl title-font font-bold mb-2">Décidez de votre prochaine
