@@ -1,0 +1,103 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import 'quill/dist/quill.snow.css';
+
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice{
+    @apply dark:!bg-gray-800;
+}
+
+.bio-container ol{
+    list-style: auto !important;
+    padding-left: 30px !important;
+}
+
+.hideScroll::-webkit-scrollbar{
+    display: none;
+}
+
+.hideScroll{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.select2-selection {
+    line-height: 25px;
+    min-height: 40px !important;
+    overflow: auto;
+}
+
+
+[x-cloak] {
+    display: none;
+}
+
+.select2-container--default .select2-selection--single {
+    @apply  !border-gray-700 text-[14px] !flex !items-center !w-full dark:!bg-gray-800 dark:text-gray-200;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    @apply items-center dark:bg-gray-800 dark:text-gray-200;
+}
+
+
+.select2-container--default .select2-selection--multiple{
+    @apply  !border-gray-700 text-[14px]  !w-full dark:bg-gray-800 dark:text-gray-200;
+}
+
+.ql-container.ql-snow {
+    @apply border-gray-700 rounded-b-md;
+}
+
+.ql-toolbar.ql-snow {
+    @apply border-gray-700 rounded-t-md;
+}
+
+/*** Ceci concerne le formulaire d'ajout d'offre ***/
+#form-step-container {
+    @apply flex flex-col space-y-6 bg-white dark:bg-gray-800 dark:text-gray-200 rounded-md md:shadow-md md:w-[80%] mx-auto relative;
+}
+
+.form-collection-container {
+    @apply flex flex-col justify-center mx-auto w-full relative border-b-2;
+}
+
+.form-collection-header {
+    @apply mb-2 py-4 text-gray-700 dark:text-gray-200 mx-auto;
+}
+
+.form-collection-title {
+    @apply mb-1 text-lg font-bold bg-yellow-300;
+}
+
+.form-collection-description {
+    @apply text-[14px];
+}
+
+.form-container {
+    @apply bg-white dark:bg-gray-800 p-4 rounded-xl mx-auto w-full;
+}
+
+.form {
+    @apply flex flex-col space-y-4 items-center;
+}
+
+.input-container {
+    @apply col-span-6 sm:col-span-4 w-full md:w-[90%] justify-center;
+}
+
+.label {
+    @apply block text-sm text-gray-700 dark:text-gray-400 font-semibold mb-2;
+}
+
+.input-sub-container {
+    @apply col-span-6 sm:col-span-4 lg:w-2/3;
+}
+
+.input {
+    @apply dark:bg-transparent rounded-md dark:text-gray-200 border-gray-700 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 mt-1 block w-full text-[14px];
+}
+
+.skill-deleter {
+    @apply z-20 absolute right-2 top-0 text-[18px] h-full flex items-center w-[30px];
+}
