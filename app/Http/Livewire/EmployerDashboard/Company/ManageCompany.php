@@ -153,7 +153,7 @@ class ManageCompany extends Component
             $this->field = $this->company->field;
         }
 
-        $this->logo = $this->company->logo ?  env('APP_URL') . Storage::url($this->company->logo) : '';
+        $this->logo = $this->company->logo ?  Storage::url($this->company->logo) : '';
         //dd(env('APP_URL').Storage::url($this->company->logo));
 
 
